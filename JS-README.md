@@ -95,6 +95,6 @@ console.log( a );	// 42
   * Logical: && (and), || (or), as in a || b that selects either a or b.
   4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
     (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
-  
+  5. 
 
   
