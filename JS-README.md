@@ -11,9 +11,9 @@
 ```
 2. The characters a and b are called variables which are like simple boxes you can store any of your stuff in. In programs, variables hold values (like the number 42) to be used by the program. Think of them as symbolic placeholders for the values themselves.
 3. By contrast, the 2 is just a value itself, called a literal value, because it stands alone without being stored in a variable.
-4. The = and * characters are operators -- they perform actions with the values and variables such as assignment and mathematic multiplication.
+4. The '=' and '*' characters are operators -- they perform actions with the values and variables such as assignment and mathematic multiplication.
 5. Most statements in JavaScript conclude with a semicolon (;) at the end.
-6. The statement a = b * 2; tells the computer, roughly, to get the current value stored in the variable b, multiply that value by 2, then store the result back into another variable we call a.
+6. The statement 'a = b * 2'; tells the computer, roughly, to get the current value stored in the variable b, multiply that value by 2, then store the result back into another variable we call a.
 
 ## Expressions
 
@@ -46,7 +46,7 @@ alert( a );
 
 ## Try It Yourself
 
-1. Go to browser click <ctrl> + <shift> + <c> or you can right click and select inspect, it will open the console.
+1. Go to browser click '<ctrl> + <shift> + <c>' or you can right click and select inspect, it will open the console.
 2. To type multiple lines into the console at once, use <shift> + <enter> to move to the next new line. Once you hit <enter> by itself, the console will run everything you've just typed.
 3. Let's get familiar with the process of running code in the console. First, I suggest opening up an empty tab in your browser. I prefer to do this by typing about:blank into the address bar. Then, make sure your developer console is open, as we just mentioned.
 Now, type this code and see how it runs:
@@ -85,14 +85,14 @@ a = a * 2;
 console.log( a );	// 42
   ```
   3. Here are some of the most common operators in JavaScript:
-  * Assignment: = as in a = 2.
-  * Math: + (addition), - (subtraction), * (multiplication), and / (division), as in a * 3.
-  * Compound Assignment: +=, -=, *=, and /= are compound operators that combine a math operation with assignment, as in a += 2 (same as a = a + 2).
-  * Increment/Decrement: ++ (increment), -- (decrement), as in a++ (similar to a = a + 1).
-  * Object Property Access: . as in console.log().
-  * Equality: == (loose-equals), === (strict-equals), != (loose not-equals), !== (strict not-equals), as in a == b.
-  * Comparison: < (less than), > (greater than), <= (less than or loose-equals), >= (greater than or loose-equals), as in a <= b.
-  * Logical: && (and), || (or), as in a || b that selects either a or b.
+  * Assignment: '=' as in a = 2.
+  * Math: '+ (addition)', '- (subtraction)', '* (multiplication)', and '/ (division)'.
+  * Compound Assignment: '+=', '-=', '*=', and '/=' are compound operators that combine a math operation with assignment, as in a += 2 (same as a = a + 2).
+  * Increment/Decrement: '++ (increment)', '-- (decrement)', as in a++ (similar to a = a + 1).
+  * Object Property Access: '.' as in console.log().
+  * Equality: '== (loose-equals)', '=== (strict-equals)', '!= (loose not-equals)', '!== (strict not-equals)', as in a == b.
+  * Comparison: '< (less than)', '> (greater than)', '<= (less than or loose-equals)', '>= (greater than or loose-equals)', as in a <= b.
+  * Logical: '&& (and)', '|| (or)', as in a || b that selects either a or b.
 <!--   4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
     (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators). -->
  
