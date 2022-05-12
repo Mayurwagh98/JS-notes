@@ -93,8 +93,8 @@ console.log( a );	// 42
   * Equality: == (loose-equals), === (strict-equals), != (loose not-equals), !== (strict not-equals), as in a == b.
   * Comparison: < (less than), > (greater than), <= (less than or loose-equals), >= (greater than or loose-equals), as in a <= b.
   * Logical: && (and), || (or), as in a || b that selects either a or b.
-  4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
-    (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+<!--   4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
+    (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators). -->
  
    ## Vlues and Types
     
