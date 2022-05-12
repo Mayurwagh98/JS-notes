@@ -98,15 +98,7 @@ console.log( a );	// 42
  
   ## Values & Types
 
-If you ask an employee at a phone store how much a certain phone costs, and they say "ninety-nine, ninety-nine" (i.e., $99.99), they're giving you an actual numeric dollar figure that represents what you'll need to pay (plus taxes) to buy it. If you want to buy two of those phones, you can easily do the mental math to double that value to get $199.98 for your base cost.
-
-If that same employee picks up another similar phone but says it's "free" (perhaps with air quotes), they're not giving you a number, but instead another kind of representation of your expected cost ($0.00) -- the word "free."
-
-When you later ask if the phone includes a charger, that answer could only have been either "yes" or "no."
-
-In very similar ways, when you express values in a program, you choose different representations for those values based on what you plan to do with them.
-
-These different representations for values are called *types* in programming terminology. JavaScript has built-in types for each of these so called *primitive* values:
+There are different representations for values are called *types* in programming terminology. JavaScript has built-in types for each of these so called *primitive* values:
 
 * When you need to do math, you want a `number`.
 * When you need to print a value on the screen, you need a `string` (one or more characters, words, sentences).
