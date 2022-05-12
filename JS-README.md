@@ -106,5 +106,15 @@ There are different representations for values are called *types* in programming
 
 Values that are included directly in the source code are called *literals*. `string` literals are surrounded by double quotes `"..."` or single quotes (`'...'`) -- the only difference is stylistic preference. `number` and `boolean` literals are just presented as is (i.e., `42`, `true`, etc.).
 
+  Consider: 
+```
+  "I am a string";
+'I am also a string';
+
+42;
+
+true;
+false;
+  ```
 
   
