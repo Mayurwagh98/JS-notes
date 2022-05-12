@@ -109,12 +109,12 @@ Values that are included directly in the source code are called *literals*. `str
   Consider: 
 ```
   "I am a string";
-'I am also a string';
+  'I am also a string';
 
-42;
+  42;
 
-true;
-false;
-  ```
+  true;
+  false;
+ ```
 
   
