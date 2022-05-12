@@ -85,5 +85,16 @@ a = a * 2;
 console.log( a );	// 42
   ```
   3. Here are some of the most common operators in JavaScript:
+  * Assignment: = as in a = 2.
+  * Math: + (addition), - (subtraction), * (multiplication), and / (division), as in a * 3.
+  * Compound Assignment: +=, -=, *=, and /= are compound operators that combine a math operation with assignment, as in a += 2 (same as a = a + 2).
+  * Increment/Decrement: ++ (increment), -- (decrement), as in a++ (similar to a = a + 1).
+  * Object Property Access: . as in console.log().
+  * Equality: == (loose-equals), === (strict-equals), != (loose not-equals), !== (strict not-equals), as in a == b.
+  * Comparison: < (less than), > (greater than), <= (less than or loose-equals), >= (greater than or loose-equals), as in a <= b.
+  * Logical: && (and), || (or), as in a || b that selects either a or b.
+  4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
+    (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
   
+
   
