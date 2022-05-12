@@ -57,4 +57,33 @@ Now, type this code and see how it runs:
 
   console.log( b );
 ```
+## Output
+
+1. First, the log( b ) part is referred to as a function call. What's happening is we're handing the b variable to that function, which asks it to take the value of b and print it to the console.
+2. Second, the console. part is an object reference where the log(..) function is located.
+
+  ## Input
+  
+  1. There's an easier way to get input for simple learning and demonstration purposes. Use the prompt(..) function:
+  ````
+  age = prompt( "Please tell me your age:" );
+
+  console.log( age );
+  ```
+  2. The message you pass to prompt(..) -- in this case, "Please tell me your age:" -- is printed into the popup.
+  
+  ## Operators
+  
+  1. The = equals operator is used for assignment -- we first calculate the value on the right-hand side (source value) of the = and then put it into the variable that we specify on the left-hand side (target variable).
+  2. You should always declare the variable by name before you use it. But you only need to declare a variable once for each scope; it can be used as many times after that as needed.
+  ```
+  var a = 20;
+
+a = a + 1;
+a = a * 2;
+
+console.log( a );	// 42
+  ```
+  3. Here are some of the most common operators in JavaScript:
+  
   
