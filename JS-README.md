@@ -93,18 +93,9 @@ console.log( a );	// 42
   * Equality: == (loose-equals), === (strict-equals), != (loose not-equals), !== (strict not-equals), as in a == b.
   * Comparison: < (less than), > (greater than), <= (less than or loose-equals), >= (greater than or loose-equals), as in a <= b.
   * Logical: && (and), || (or), as in a || b that selects either a or b.
-  4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
-    (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+<!--   4. For much more detail, and coverage of operators see the Mozilla Developer Network (MDN)'s "Expressions and Operators" 
+    (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators). -->
  
-   ## Vlues and Types
-    
-    1. There different representations for values are called types in programming terminology. JavaScript has built-in types for each of these so called primitive    values:
-    * When you need to do math, you want a number.
-    * When you need to print a value on the screen, you need a string (one or more characters, words, sentences).
-    * When you need to make a decision in your program, you need a boolean (true or false).
-    2. Values that are included directly in the source code are called literals. string literals are surrounded by double quotes "..." or single quotes ('...') -- the only difference is stylistic preference. number and boolean literals are just presented as is (i.e., 42, true, etc.).
-    3. Consider:
-    
-    
+  
 
   
