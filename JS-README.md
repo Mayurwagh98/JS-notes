@@ -65,7 +65,7 @@ Now, type this code and see how it runs:
   ## Input
   
   1. There's an easier way to get input for simple learning and demonstration purposes. Use the prompt(..) function:
-  ````
+  ```
   age = prompt( "Please tell me your age:" );
 
   console.log( age );
