@@ -248,3 +248,31 @@ Values that aren't already of an expected type are often coerced to that type. T
 JavaScript defines a list of specific values that are considered `"falsy"` because when coerced to a boolean, they become false -- these include values like `0` and `""`. Any other value not on the `"falsy"` list is automatically `"truthy"` -- when coerced to a `boolean` they become `true`. 
 
 `Truthy` values include things like `99.99` and `"free"`. 
+
+## Loops
+								      
+1. Repeating a set of actions until a certain condition fails -- in other words, repeating only while the condition holds -- is the job of programming loops; loops can take different forms, but they all satisfy this basic behavior.
+2. A loop includes the test condition as well as a block (typically as { .. }). Each time the loop block executes, that's called an `iteration`.
+```
+while (numOfCustomers > 0) {
+	console.log( "How may I help you?" );
+
+	// help the customer...
+
+	numOfCustomers = numOfCustomers - 1;
+}
+
+// versus:
+
+do {
+	console.log( "How may I help you?" );
+
+	// help the customer...
+
+	numOfCustomers = numOfCustomers - 1;
+} while (numOfCustomers > 0);
+```
+The only practical difference between these loops is whether the conditional is tested before the first iteration (while) or after the first iteration (do..while).
+
+For a variety of historical reasons, programming languages almost always count things in a zero-based fashion, meaning starting with `0` instead of `1`.
+	  
