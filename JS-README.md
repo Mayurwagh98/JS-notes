@@ -194,9 +194,9 @@ Values that are included directly in the source code are called *literals*. `str
   
  `toFixed(..)`lets us specify how many decimal places we'd like the number rounded to, and it produces the string as necessary.
   
-  The`TAX_RATE`variable is only constant by convention -- there's nothing special in this program that prevents it from being changed. But if the city raises the sales tax rate to 9%, we can still easily update our program by setting the`TAX_RATE`assigned value to 0.09 in one place, instead of finding many occurrences of the value 0.08 strewn throughout the program and updating all of them.
+  The`TAX_RATE`variable is only constant by convention -- there's nothing special in this program that prevents it from being changed. But if the city raises the sales   tax rate to 9%, we can still easily update our program by setting the`TAX_RATE`assigned value to 0.09 in one place, instead of finding many occurrences of the value   0.08 strewn throughout the program and updating all of them.
   
-  9. The newest version of JavaScript at the time of this writing (commonly called "ES6") includes a new way to declare constants, by using const instead of var:
+ 9. The newest version of JavaScript at the time of this writing (commonly called "ES6") includes a new way to declare constants, by using const instead of var:
   ```
   // as of ES6:
   const TAX_RATE = 0.08;
@@ -208,4 +208,43 @@ Values that are included directly in the source code are called *literals*. `str
   
   ## Blocks
   
+1. In code we often need to group a series of statements together, which we often call a block. In JavaScript, a block is defined by wrapping one or more statements inside a curly-brace pair { .. }.
+  ```
+  var amount = 99.99;
 
+// a general block
+{
+	amount = amount * 2;
+	console.log( amount );	// 199.98
+}
+  ```
+  2. Typically, blocks are attached to some other control statement, such as an if statement or a loop. 
+  For example:
+  ```
+  var amount = 99.99;
+
+// is amount big enough?
+if (amount > 10) {			// <-- block attached to `if`
+	amount = amount * 2;
+	console.log( amount );	// 199.98
+}
+```
+## Conditionals
+
+```
+var bank_balance = 302.13;
+var amount = 99.99;
+
+if (amount < bank_balance) {
+	console.log( "I want to buy this phone!" );
+}
+  ```
+  The if statement requires an expression in between the parentheses ( ) that can be treated as either true or false.
+  
+  In this program, we provided the expression `amount < bank_balance`, which indeed will either evaluate to true or false depending on the amount in the bank_balance variable.
+                                                                      
+Values that aren't already of an expected type are often coerced to that type. The if statement expects a `boolean`, but if you pass it something that's not already boolean, coercion will occur.
+
+JavaScript defines a list of specific values that are considered `"falsy"` because when coerced to a boolean, they become false -- these include values like `0` and `""`. Any other value not on the `"falsy"` list is automatically `"truthy"` -- when coerced to a `boolean` they become `true`. 
+
+`Truthy` values include things like `99.99` and `"free"`. 
