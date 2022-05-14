@@ -148,5 +148,64 @@ Values that are included directly in the source code are called *literals*. `str
              comment.
                       */
   ```
+  ## Variables
   
+  1. Consider variable as a container in which you store a value.
+  2. `Static typing` - In some programming languages, you declare a variable (container) to hold a specific type of value, such as `number` or `string`. `Static typing`, otherwise known as `type enforcement`.
+  3. Dynamic typing - Other languages emphasize types for values instead of variables. `Weak typing`, otherwise known as `dynamic typing`.
+  4. We declare a variable using the var statement
+  ```
+  var amount = 99.99;
+
+  amount = amount * 2;
+
+  console.log( amount );		// 199.98
+
+  // convert `amount` to a string, and
+  // add "$" on the beginning
+  amount = "$" + String( amount );
+
+  console.log( amount );		// "$199.98"
+  ```
+  The amount variable starts out holding the `number 99.99`, and then holds the number result of `amount * 2`, which is `199.98`.
   
+  The first console.log(..) command has to implicitly `coerce` that `number` value to a `string`to print it out.
+  
+  Then the statement `amount = "$" + String(amount)` explicitly coerces the `199.98` value to a string and adds a `"$"` character to the beginning.
+  
+  At this point, `amount` now holds the `string` value `"$199.98"`, so the second `console.log(..)` statement doesn't need to do any coercion to print it out.
+  
+  5.Note that `amount` holds a running value that changes over the course of the program, illustrating the primary purpose of variables: managing program *state*.
+  6. State - state is tracking the changes to values as your program runs.
+  7. Another common usage of variables is for centralizing value setting. This is more typically called constants, when you declare a variable with a value and intend    for that value to not change throughout the program.
+  8. You declare these constants, often at the top of a program, so that it's convenient for you to have one place to go to alter a value if you need to. 
+  ```
+  var TAX_RATE = 0.08;	// 8% sales tax
+
+  var amount = 99.99;
+
+  amount = amount * 2;
+
+  amount = amount + (amount * TAX_RATE);
+
+  console.log( amount );				// 215.9784
+  console.log( amount.toFixed( 2 ) );	// "215.98"
+  ```
+  
+ `toFixed(..)`lets us specify how many decimal places we'd like the number rounded to, and it produces the string as necessary.
+  
+  The`TAX_RATE`variable is only constant by convention -- there's nothing special in this program that prevents it from being changed. But if the city raises the sales tax rate to 9%, we can still easily update our program by setting the`TAX_RATE`assigned value to 0.09 in one place, instead of finding many occurrences of the value 0.08 strewn throughout the program and updating all of them.
+  
+  9. The newest version of JavaScript at the time of this writing (commonly called "ES6") includes a new way to declare constants, by using const instead of var:
+  ```
+  // as of ES6:
+  const TAX_RATE = 0.08;
+
+  var amount = 99.99;
+
+  ```
+   constants also prevent accidentally changing value somewhere else after the initial setting. 
+  
+  ## Blocks
+  
+
