@@ -1,4 +1,4 @@
-# JS---notes
+# JS-Notes
 
 ## Code
 1. A program, often referred to as source code or just code, is a set of special instructions to tell the computer what tasks to perform. 
@@ -116,5 +116,37 @@ Values that are included directly in the source code are called *literals*. `str
   true;
   false;
  ```
+## Converting Between Types
+  
+  1. If you have a number but need to print it on the screen, you need to convert the value to a string, and in JavaScript this conversion is called "coercion." 
+  2. Similarly, if someone enters a series of numeric characters into a form on an ecommerce page, that's a string, but if you need to then use that value to do math     operations, you need to coerce it to a number.
 
+  JavaScript provides several different facilities for forcibly coercing between types. For example:
+  ```
+  var a = "42";
+  var b = Number( a );
+
+  console.log( a );	// "42"
+  console.log( b );	// 42
+  ```
+  3. When comparing the string `"99.99"` to the number `99.99`, most people would agree they are equivalent. But they're not exactly the same. It's the same value in    two different representations, two different types.
+  4. To help you out in these common situations, JavaScript will sometimes kick in and implicitly coerce values to the matching types.
+  5. If you use the == loose equals operator to make the comparison `"99.99" == 99.99`, JavaScript will convert the left-hand side `"99.99"` to its number equivalent `99.99`. The comparison then becomes `99.99 == 99.99`, which is of course `true`.
+  6. The common feeling is that implicit coercion is confusing and harms programs with unexpected bugs, and should thus be avoided. It's even sometimes called a flaw in the design of the language.
+  
+ ## Code Comments
+  
+  1.  These are bits of text in your program that are inserted purely to explain things to a human.
+  2. The interpreter/compiler will always ignore these comments.
+  3. Comments should explain why, not what. They can optionally explain how if that's particularly confusing.
+  4. In JavaScript, there are two types of comments possible: a single-line comment and a multiline comment.
+  ```
+  // This is a single-line comment
+
+  /* But this is
+       a multiline
+             comment.
+                      */
+  ```
+  
   
