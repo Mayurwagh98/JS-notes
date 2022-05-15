@@ -275,4 +275,161 @@ do {
 The only practical difference between these loops is whether the conditional is tested before the first iteration (while) or after the first iteration (do..while).
 
 For a variety of historical reasons, programming languages almost always count things in a zero-based fashion, meaning starting with `0` instead of `1`.
+
+## Functoins
 	  
+1. A function is generally a named section of code that can be "called" by name, and the code inside it will be run each time.
+```
+function printAmount() {
+	console.log( amount.toFixed( 2 ) );
+}
+
+var amount = 99.99;
+
+printAmount(); // "99.99"
+
+amount = amount * 2;
+
+printAmount(); // "199.98"
+```
+2. Functions can optionally take arguments (aka parameters) -- values you pass in. And they can also optionally return a value back.
+```
+function printAmount(amt) {
+	console.log( amt.toFixed( 2 ) );
+}
+
+function formatAmount() {
+	return "$" + amount.toFixed( 2 );
+}
+
+var amount = 99.99;
+
+printAmount( amount * 2 );		// "199.98"
+
+amount = formatAmount();
+console.log( amount );			// "$99.99"
+```
+The function printAmount(..) takes a parameter that we call amt. The function formatAmount() returns a value. Of course, you can also combine those two techniques in the same function.
+
+3. Functions are often used for code that you plan to call multiple times, but they can also be useful just to organize related bits of code into named collections, even if you only plan to call them once.
+```
+const TAX_RATE = 0.08;
+
+function calculateFinalPurchaseAmount(amt) {
+	// calculate the new amount with the tax
+	amt = amt + (amt * TAX_RATE);
+
+	// return the new amount
+	return amt;
+}
+
+var amount = 99.99;
+
+amount = calculateFinalPurchaseAmount( amount );
+
+console.log( amount.toFixed( 2 ) );		// "107.99"
+```
+Although calculateFinalPurchaseAmount(..) is only called once, organizing its behavior into a separate named function makes the code that uses its logic (the amount = calculateFinal... statement) cleaner. 
+
+## Scope
+
+1.  Scope is basically a collection of variables as well as the rules for how those variables are accessed by name.
+2. Only code inside that function can access that function's scoped variables.
+3. A variable name has to be unique within the same scope -- there can't be two different a variables sitting right next to each other. But the same variable name `a` could appear in different scopes.
+```
+function one() {
+	// this `a` only belongs to the `one()` function
+	var a = 1;
+	console.log( a );
+}
+
+function two() {
+	// this `a` only belongs to the `two()` function
+	var a = 2;
+	console.log( a );
+}
+
+one();		// 1
+two();		// 2
+```
+4. Nested scope
+```
+function outer() {
+	var a = 1;
+
+	function inner() {
+		var b = 2;
+
+		// we can access both `a` and `b` here
+		console.log( a + b );	// 3
+	}
+
+	inner();
+
+	// we can only access `a` here
+	console.log( a );			// 1
+}
+
+outer();
+```
+Lexical scope rules say that code in one scope can access variables of either that scope or any scope outside of it.
+
+So, code inside the `inner()` function has access to both variables `a` and `b`, but code in `outer()` has access only to `a` -- it cannot access `b` because that variable is only inside `inner()`.
+	  
+## Practice Problem
+	  
+* Write a program to calculate the total price of your phone purchase. You will keep purchasing phones (hint: loop!) until you run out of money in your bank account. 
+* You'll also buy accessories for each phone as long as your purchase amount is below your mental spending threshold.
+* After you've calculated your purchase amount, add in the tax, then print out the calculated purchase amount, properly formatted.
+* Finally, check the amount against your bank account balance to see if you can afford it or not.
+* You should set up some constants for the "tax rate," "phone price," "accessory price," and "spending threshold," as well as a variable for your "bank account balance.""
+* You should define functions for calculating the tax and for formatting the price with a "$" and rounding to two decimal places.
+* Bonus Challenge: Try to incorporate input into this program, perhaps with the prompt(..) covered in "Input" earlier. You may prompt the user for their bank account balance, for example. Have fun and be creative!
+	  
+## Solution 
+```
+const SPENDING_THRESHOLD = 200;
+const TAX_RATE = 0.08;
+const PHONE_PRICE = 99.99;
+const ACCESSORY_PRICE = 9.99;
+
+var bank_balance = 303.91;
+var amount = 0;
+
+function calculateTax(amount) {
+	return amount * TAX_RATE;
+}
+
+function formatAmount(amount) {
+	return "$" + amount.toFixed( 2 );
+}
+
+// keep buying phones while you still have money
+while (amount < bank_balance) {
+	// buy a new phone!
+	amount = amount + PHONE_PRICE;
+
+	// can we afford the accessory?
+	if (amount < SPENDING_THRESHOLD) {
+		amount = amount + ACCESSORY_PRICE;
+	}
+}
+
+// don't forget to pay the government, too
+amount = amount + calculateTax( amount );
+
+console.log(
+	"Your purchase: " + formatAmount( amount )
+);
+// Your purchase: $334.76
+
+// can you actually afford this purchase?
+if (amount > bank_balance) {
+	console.log(
+		"You can't afford this purchase. :("
+	);
+}
+// You can't afford this purchase. :(
+```
+	
+	
